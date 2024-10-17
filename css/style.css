@@ -1,0 +1,362 @@
+body{
+    font-family: 'Inter' sans-serif;
+}
+/* CSS Variables for easy customization */
+:root {
+    --primary-color: #010e28;  /* Primary color */
+    --secondary-color: #CDBCA8; /* Secondary color */
+    --background-color: #FFF; /* Background color */
+    --text-color: #333;          /* Default text color */
+    --link-color: #000;       /* Link color */
+    --link-hover-color: #ffdb2d; /* Link hover color */
+    --error-color: #dc3545;      /* Error color */
+    --success-color: #28a745;    /* Success color */
+    --font-family: 'Arial', sans-serif; /* Default font */
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal; /* Adjust as needed */
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline; /* Optional */
+}
+
+/* Buttons */
+button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #000; /* Darker shade on hover */
+    box-shadow: 10px 10px 20px rgba(51,51,255,.2);
+}
+
+button:disabled {
+    background-color: #cccccc; /* Grey for disabled state */
+    cursor: not-allowed;
+}
+
+/* Text Fields */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none; /* Remove default outline */
+}
+
+/* Form Styles */
+label {
+    margin-bottom: 5px;
+    display: block; /* Labels above inputs */
+}
+
+/* Navigation */
+nav {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+/* Cards */
+.card {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0; /* Space between cards */
+}
+
+/* Icon Styles */
+.icon {
+    width: 24px; /* Adjust as needed */
+    height: 24px;
+    vertical-align: middle; /* Align with text */
+}
+
+/* Spacing and Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Responsive heading */
+    }
+
+    .container {
+        padding: 10px; /* Less padding on small screens */
+    }
+}
+
+/* Animations and Transitions */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Error Message Styles */
+.error {
+    color: var(--error-color);
+    margin-top: 5px;
+    font-size: 0.875rem; /* Smaller font size for errors */
+}
+
+.success {
+    color: var(--success-color);
+    margin-top: 5px;
+    font-size: 0.875rem; /* Smaller font size for success messages */
+}
+.primary-btn {
+    color: #fff;
+    transition: all .3s ease;
+    min-width: 170px;
+    text-align: center;
+    padding: 15px;
+    display: inline-block;
+    border: none;
+    border-radius: 2px;
+    background: #000;
+}
+.primary-btn:hover{
+    box-shadow: 10px 10px 20px rgba(51,51,255,.2);
+}
+.nav-link:focus, .nav-link:hover{
+    color: #000;
+}
+.section{
+    border-top: 1px solid #e3e3e3;
+    padding-top: 20px;
+}
+.opacity-box{
+    opacity: 0.8;
+}
+.form-wrapper .submit-holder{
+    text-align: right;
+}
+.about-me-info, .colored-link, .fonts-icons {
+    font-size: 14px;
+    line-height: 1.4;
+}
+.about-me-info {
+    margin-bottom: 30px;
+}
+.about-me-info p {
+    margin-bottom: 10px;
+}
+.portfolio-sort ul li, .span-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Lato, sans-serif;
+    line-height: 1.66;
+}
+.span-title {
+    float: left;
+    display: block;
+}
+.span-title+span {
+    display: block;
+    padding-left: 90px;
+    opacity: .8;
+}
+.span-title+.span-icons {
+    opacity: 1;
+}
+.span-title+span {
+    display: block;
+    padding-left: 90px;
+    opacity: .8;
+}
+.about-me-info a.fonts-icons {
+    padding-right: 20px;
+    margin-bottom: 5px;
+    min-width: 16px;
+    text-align: center;
+}
+.about-me-info, .colored-link, .fonts-icons {
+    font-size: 14px;
+    line-height: 1.4;
+}
+.feedback-image{
+    border-radius: 50px;
+    width: 100px !important;
+}
+h2.section-heading::before{
+    content: "";
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 1px;
+    background: #fd0;
+    z-index: 1;
+    bottom: -4px;
+}
+h2.section-heading{
+    position: relative;
+}
+h2.section-heading::after{
+    content: "\f105";
+    position: absolute;
+    color: #fd0;
+    z-index: 1;
+    font: normal normal normal 12px / 1 FontAwesome;
+    bottom: -10px;
+    right: 40px;
+}
+.paddingTop10{
+    padding-top:10px;
+}
+.paddingTop20{
+    padding-top:20px;
+}
+.feedback-block{
+    width:100%;
+}
+.feedback-block-top{
+    display: flex;
+}
+.paddingLeft10{
+    padding-left: 10px;
+}
+.advantages-box{
+    position: relative;
+    padding: 2px 20px 20px 0px;
+}
+.advantages-box span {
+    font-size: 30px;
+    position: absolute;
+    color: #ffdb2d;
+    font-weight: 900;
+    top: -15px;
+    left: -30px;
+    z-index: -1;
+}
+.testimonial-head-quote {
+    font-size: 80px;
+    font-weight: 500;
+    color: #ffdb2d;
+    text-align: center;
+    line-height: 0.5;
+}
+.portfolio-box {
+    display: block;
+    margin: 0 auto 30px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+.portfolio-box .portfolio-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.55;
+    padding-top: 15px;
+}
+.portfolio-box .portfolio-name {
+    transition: all .3s ease;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 2px;
+}
+.portfolio-box .portfolio-date {
+    opacity: .8;
+}
+.portfolio-box .portfolio-name span {
+    color:#000;
+}
+.portfolio-box img {
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.portfolio-box img:hover {
+    transform: scale(1.2);
+}
+.portfolio-img{
+    overflow: hidden;
+}
+a.portfolio-box:hover{
+    text-decoration: none;
+    color: var(--link-hover-color)
+}
+.about-info{
+    margin-bottom: 5px;
+}
